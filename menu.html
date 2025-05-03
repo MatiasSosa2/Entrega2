@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora Café</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+</head>
+
+<body>
+  <div class="text-center text-white py-2 px-3 frase">
+    Café. Simple. Inolvidable.
+  </div>
+  <header>
+    <nav class="navbar navbar-expand-lg barranav" style="border-bottom: 1px solid white;">
+      <div class="container-fluid">
+        <img class="foto-logo" src="../assets/logo.jpg" alt="foto-logo">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 d-flex gap-5">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="menu.html">Carta Menú</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <section class="postres-carrusel-section py-5" >
+    <div class="container">
+      <h2 class="text-center mb-4">Nuestros Postres</h2>
+      <div id="postresCarrusel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner postres-carrusel-inner">
+          <div class="carousel-item active">
+            <div class="row g-3">
+              <div class="col-12 col-md-4" data-aos="fade-right" data-aos-duration="2000">
+                <div class="card postre-card">
+                  <img src="../assets/Cheesecake-clasico.jpg" class="card-img-top" alt="Cheesecake">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Cheesecake Clásico</h5>
+                    <p class="card-text">Base crocante y frutos rojos frescos.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4" data-aos="fade-right" data-aos-duration="2500">
+                <div class="card postre-card">
+                  <img src="../assets/tiramisu-italiano.jpg" class="card-img-top" alt="Tiramisú">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Tiramisú Italiano</h5>
+                    <p class="card-text">Café, crema mascarpone y cacao puro.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4" data-aos="fade-right" data-aos-duration="3000">
+                <div class="card postre-card">
+                  <img src="../assets/brownie-nueces.jpg" class="card-img-top" alt="Brownie">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Brownie con Nueces</h5>
+                    <p class="card-text">Textura húmeda y sabor intenso.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row g-3">
+              <div class="col-12 col-md-4" >
+                <div class="card postre-card">
+                  <img src="../assets/tarta-limon.jpg" class="card-img-top" alt="Tarta de Limón">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Tarta de Limón</h5>
+                    <p class="card-text">Refrescante y dulce a la vez.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="card postre-card">
+                  <img src="../assets/Chocotorta.jpg" class="card-img-top" alt="Chocotorta">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Chocotorta</h5>
+                    <p class="card-text">Un clásico argentino que nunca falla.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="card postre-card">
+                  <img src="../assets/flan-casero.jpg" class="card-img-top" alt="Flan Casero">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Flan Casero</h5>
+                    <p class="card-text">Con dulce de leche o crema, vos elegís.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#postresCarrusel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#postresCarrusel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+  <section class="menu-section py-5 " style="background-color: rgb(253, 43, 6);">
+    <div class="container">
+      <h2 class="text-center mb-4 fw-bold">Nuestra Carta</h2>
+      <div class="row gy-5">
+  
+        <div class="col-md-6" >
+          <h4 class="menu-categoria">Cafés</h4>
+          <ul class="list-group menu-lista" data-aos="fade-up" data-aos-duration="1500">
+            <li class="list-group-item d-flex justify-content-between">Espresso <span>$1000</span></li>
+            <li class="list-group-item d-flex justify-content-between">Cappuccino <span>$1300</span></li>
+            <li class="list-group-item d-flex justify-content-between">Latte <span>$1400</span></li>
+            <li class="list-group-item d-flex justify-content-between">Flat White <span>$1450</span></li>
+            <li class="list-group-item d-flex justify-content-between">Café Mocha <span>$1500</span></li>
+          </ul>
+  
+          <h4 class="menu-categoria mt-4">Tés & Infusiones</h4>
+          <ul class="list-group menu-lista" data-aos="fade-up" data-aos-duration="2000">
+            <li class="list-group-item d-flex justify-content-between">Té Negro <span>$900</span></li>
+            <li class="list-group-item d-flex justify-content-between">Té Verde <span>$1000</span></li>
+            <li class="list-group-item d-flex justify-content-between">Chai Latte <span>$1200</span></li>
+            <li class="list-group-item d-flex justify-content-between">Infusión Frutal <span>$950</span></li>
+            <li class="list-group-item d-flex justify-content-between">Infusión de Hierbas <span>$950</span></li>
+          </ul>
+  
+          <h4 class="menu-categoria mt-4" >Jugos y Licuados</h4>
+          <ul class="list-group menu-lista" data-aos="fade-up" data-aos-duration="2500">
+            <li class="list-group-item d-flex justify-content-between">Limonada <span>$1200</span></li>
+            <li class="list-group-item d-flex justify-content-between">Naranja exprimida <span>$1400</span></li>
+            <li class="list-group-item d-flex justify-content-between">Licuado de Banana <span>$1600</span></li>
+            <li class="list-group-item d-flex justify-content-between">Licuado de Frutilla <span>$1650</span></li>
+            <li class="list-group-item d-flex justify-content-between">Smoothie Mixto <span>$1700</span></li>
+          </ul>
+        </div>
+  
+        <div class="col-md-6">
+          <h4 class="menu-categoria" >Pastelería & Postres</h4>
+          <ul class="list-group menu-lista" data-aos="fade-up" data-aos-duration="3000">
+            <li class="list-group-item d-flex justify-content-between">Cheesecake <span>$2500</span></li>
+            <li class="list-group-item d-flex justify-content-between">Tiramisú <span>$2600</span></li>
+            <li class="list-group-item d-flex justify-content-between">Brownie con Helado <span>$2700</span></li>
+            <li class="list-group-item d-flex justify-content-between">Tarta de Frutas <span>$2300</span></li>
+            <li class="list-group-item d-flex justify-content-between">Medialuna rellena <span>$1100</span></li>
+          </ul>
+  
+          <h4 class="menu-categoria mt-4">Snacks Salados</h4>
+          <ul class="list-group menu-lista" data-aos="fade-up" data-aos-duration="3000">
+            <li class="list-group-item d-flex justify-content-between">Tostado de Jamón y Queso <span>$1800</span></li>
+            <li class="list-group-item d-flex justify-content-between">Croissant con Queso <span>$1500</span></li>
+            <li class="list-group-item d-flex justify-content-between">Wrap de Pollo <span>$2200</span></li>
+            <li class="list-group-item d-flex justify-content-between">Bagel con Salmón <span>$2500</span></li>
+            <li class="list-group-item d-flex justify-content-between">Tarta de Verduras <span>$2000</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+    
+  
+
+    <!-- Pie de Página -->
+
+    <footer class="text-white py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <h5>Sobre Nosotros</h5>
+              <p>Cafetería moderna ubicada en La Ciudad de La Plata</p>
+            </div>
+            <div class="col-md-4">
+              <h5>Enlaces</h5>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white">Inicio</a></li>
+                <li><a href="#" class="text-white">Servicios</a></li>
+                <li><a href="#" class="text-white">Contacto</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h5>Redes Sociales</h5>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white">Facebook</a></li>
+                <li><a href="#" class="text-white">Twitter</a></li>
+                <li><a href="#" class="text-white">Instagram</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="text-center py-3">
+          &copy;2025 Matias Sosa. Todos los derechos reservados
+        </div>
+    </footer>  
+
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+      <script>
+        duration: 2000;
+        AOS.init(); 
+      </script>
+      </body>
+      
+  
+  </body>
+  </html>

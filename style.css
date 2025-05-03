@@ -1,0 +1,218 @@
+body {
+  background-color:#cc812c !important;
+  color: #4d1a11 !important;
+}
+
+.frase {
+  background-color: #422109;
+  font-weight: 600;
+  font-size: 1rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+.barranav {
+      font-size: 1.2rem;    
+}
+
+@media (min-width: 992px) {
+  .barranav {
+    height: 15vh;
+  }
+}
+.nav-item .nav-link,
+.nav-item .nav-link.active {
+  color: white !important;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin: 30px
+}
+
+.nav-item .nav-link:hover {
+  text-decoration: underline;
+  transform: scale(1.1); /* agranda solo el texto */
+}
+
+.banner {
+  height: 30vh;
+  object-fit: cover;
+  opacity: 0.7; /* Añade transparencia a la imagen */
+}
+
+.text-overlay h2 {
+  font-size: 3rem; /* Ajusta el tamaño de la fuente */
+  font-weight: 600;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para mejor visibilidad */
+  
+}
+
+.foto-logo {
+  height: 8vh;
+  border-radius: 30vh;
+  margin-left: 5vh;
+}
+
+.Contenedor-servicios {
+  padding: 5vh;
+  border: 1px solid #422109;
+  border-radius: 5vh;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.Contenedor-servicios h2,
+.Contenedor-servicios h4{
+  color: #422109;
+  text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.7);
+  font-weight: 700;
+}
+
+.Contenedor-servicios img {
+  box-shadow:  2px 2px 5px rgba(0, 0, 0, 0.7);
+  height: 15vh;
+  width: 12vh;
+  border-radius: 2vh;
+}
+
+#carrusel {
+  background-color: #422109;
+}
+
+#carrusel img {
+  width: 80vw; /* O 80% */
+  height: 80vh;
+  object-fit: cover;
+  margin: 10vh ; /* Centrar imagen si el width es menor al 100% */
+  display: block;
+}
+
+
+.Receta {
+  background-color: #aa3521;
+  border-radius: 1vh;
+  border: none;
+  height: 30vh;
+}
+
+.Receta h5 {
+  color: rgb(100, 98, 96);
+}
+
+.Receta p {
+  color: rgb(148, 122, 101);
+}
+
+
+.card {
+  background-color: #f5e9dc; /* beige suave */
+  border: 1px solid #d4a373; /* borde marrón claro */
+  border-radius: 10px;
+  overflow: hidden; /* asegura que la imagen y el texto estén dentro del borde */
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  border-bottom: 1px solid #d4a373; /* para separar visualmente imagen y texto */
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+}
+
+.card-body.Receta {
+  padding: 1rem;
+  background-color: #fff4e6; /* beige más claro */
+  color: #3f1910 !important; /* marrón oscuro para texto */
+}
+
+/* === MENU GENERAL === */
+.menu-section {
+  background-color: #FAF3E0;
+}
+
+.menu-categoria {
+  color: #F57C00;
+  font-weight: bold;
+  border-bottom: 2px solid #F57C00;
+  padding-bottom: 5px;
+}
+
+.menu-lista {
+  border: none;
+}
+
+.menu-lista .list-group-item {
+  background-color: #dac6a6;
+  border: 1px solid #FBE9E7;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  color: #3E2723;
+  padding: 12px 16px;
+}
+
+.menu-lista .list-group-item:hover {
+  background-color: #FFE0B2;
+  cursor: pointer;
+}
+
+
+.presentacion-contacto {
+  background-color: #d8be94; /* beige claro */
+  color: #4E342E; /* marrón oscuro */
+}
+
+.titulo-contacto-inicio {
+  font-weight: bold;
+  color: #6D4C41;
+}
+
+.subtitulo-contacto-inicio {
+  font-size: 1.2rem;
+  color: #5D4037;
+}
+
+.mensaje-contacto-inicio {
+  color: #8D6E63;
+  font-size: 1rem;
+}
+
+.btn-contacto {
+  background-color: #504542 !important; /* naranja suave */
+  color: white !important;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-contacto:hover {
+  background-color: #d38c76 !important;
+  color: #fff !important;
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+.bg-beige {
+  background-color: #F5F1EA;
+}
+
+.text-marron {
+  color: #4E342E;
+}
+
+.btn-enviar {
+  background-color: #FF7043;
+  color: white;
+  font-weight: 500;
+  padding: 10px 30px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.btn-enviar:hover {
+  background-color: #E64A19;
+}
+
