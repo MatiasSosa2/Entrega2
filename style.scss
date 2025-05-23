@@ -1,0 +1,282 @@
+// Variables
+$color-fondo: #cc7b1f !important;
+$color-texto: #4d1a11 !important;
+$color-frase-bg: #422109;
+$color-frase-text: #422109;
+$color-frase-shadow: rgba(0, 0, 0, 0.7);
+$color-nav-link: white !important;
+$color-carrusel-bg: #422109;
+$color-receta-bg: #aa3521;
+$color-card-bg: #f5e9dc;
+$color-card-border: #d4a373;
+$color-card-body-bg: #fff4e6;
+$color-card-body-text: #3f1910 !important;
+$color-menu-section-bg: #FAF3E0;
+$color-menu-categoria: #F57C00;
+$color-menu-lista-bg: #dac6a6;
+$color-menu-lista-border: #FBE9E7;
+$color-menu-lista-hover-bg: #FFE0B2;
+$color-presentacion-bg: #d8be94;
+$color-presentacion-text: #4E342E;
+$color-titulo-contacto: #6D4C41;
+$color-subtitulo-contacto: #5D4037;
+$color-mensaje-contacto: #8D6E63;
+$color-btn-contacto-bg: #504542 !important;
+$color-btn-contacto-hover-bg: #d38c76 !important;
+$color-bg-beige: #F5F1EA;
+$color-text-marron: #4E342E;
+$color-btn-enviar-bg: #FF7043;
+$color-btn-enviar-hover-bg: #E64A19;
+
+// Mixins
+@mixin transition($props...) {
+  transition: $props;
+}
+
+@mixin transform-scale($scale) {
+  transform: scale($scale);
+}
+
+@mixin text-shadow($x, $y, $blur, $color) {
+  text-shadow: $x $y $blur $color;
+}
+
+@mixin box-shadow($x, $y, $blur, $color) {
+  box-shadow: $x $y $blur $color;
+}
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+// Animations
+@keyframes pulseScale {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
+body {
+  background-color: $color-fondo;
+  color: $color-texto;
+}
+
+.frase {
+  background-color: $color-frase-bg;
+  font-weight: 600;
+  font-size: 1rem;
+  @include text-shadow(2px, 2px, 5px, $color-frase-shadow);
+}
+
+.barranav {
+  font-size: 1.2rem;
+
+  @media (min-width: 992px) {
+    height: 15vh;
+  }
+}
+
+.nav-item {
+  .nav-link, 
+  .nav-link.active {
+    color: $color-nav-link;
+    text-decoration: none;
+    @include transition(all 0.3s ease);
+    margin: 30px;
+  }
+
+  .nav-link:hover {
+    text-decoration: underline;
+    @include transform-scale(1.1);
+  }
+}
+
+.banner {
+  height: 30vh;
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+.text-overlay {
+  h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    @include text-shadow(2px, 2px, 5px, $color-frase-shadow);
+  }
+}
+
+.foto-logo {
+  height: 8vh;
+  @include border-radius(30vh);
+  margin-left: 5vh;
+}
+
+.Contenedor-servicios {
+  padding: 5vh;
+  border: 1px solid $color-frase-bg;
+  @include border-radius(5vh);
+  @include text-shadow(2px, 2px, 5px, $color-frase-shadow);
+
+  h2,
+  h4 {
+    color: $color-frase-bg;
+    @include text-shadow(1px, 0, 1px, $color-frase-shadow);
+    font-weight: 700;
+  }
+
+  img {
+    @include box-shadow(2px, 2px, 5px, $color-frase-shadow);
+    height: 15vh;
+    width: 12vh;
+    @include border-radius(2vh);
+  }
+}
+
+#carrusel {
+  background-color: $color-carrusel-bg;
+
+  img {
+    width: 80vw;
+    height: 80vh;
+    object-fit: cover;
+    margin: 10vh;
+    display: block;
+  }
+}
+
+.Receta {
+  background-color: $color-receta-bg;
+  @include border-radius(1vh);
+  border: none;
+  height: 30vh;
+
+  h5 {
+    color: rgb(100, 98, 96);
+  }
+
+  p {
+    color: rgb(148, 122, 101);
+  }
+}
+
+.card {
+  background-color: $color-card-bg;
+  border: 1px solid $color-card-border;
+  border-radius: 10px;
+  overflow: hidden;
+  @include transition(transform 0.3s ease);
+
+  &:hover {
+    @include transform-scale(1.02);
+    animation: pulseScale 0.6s ease forwards;
+  }
+
+  &-img-top {
+    border-bottom: 1px solid $color-card-border;
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+  }
+
+  &-body {
+    &.Receta {
+      padding: 1rem;
+      background-color: $color-card-body-bg;
+      color: $color-card-body-text;
+    }
+  }
+}
+
+/* === MENU GENERAL === */
+.menu-section {
+  background-color: $color-menu-section-bg;
+}
+
+.menu-categoria {
+  color: $color-menu-categoria;
+  font-weight: bold;
+  border-bottom: 2px solid $color-menu-categoria;
+  padding-bottom: 5px;
+}
+
+.menu-lista {
+  border: none;
+
+  .list-group-item {
+    background-color: $color-menu-lista-bg;
+    border: 1px solid $color-menu-lista-border;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    color: #3E2723;
+    padding: 12px 16px;
+
+    &:hover {
+      background-color: $color-menu-lista-hover-bg;
+      cursor: pointer;
+    }
+  }
+}
+
+.presentacion-contacto {
+  background-color: $color-presentacion-bg;
+  color: $color-presentacion-text;
+}
+
+.titulo-contacto-inicio {
+  font-weight: bold;
+  color: $color-titulo-contacto;
+}
+
+.subtitulo-contacto-inicio {
+  font-size: 1.2rem;
+  color: $color-subtitulo-contacto;
+}
+
+.mensaje-contacto-inicio {
+  color: $color-mensaje-contacto;
+  font-size: 1rem;
+}
+
+.btn-contacto {
+  background-color: $color-btn-contacto-bg;
+  color: white !important;
+  font-weight: 500;
+  padding: 10px 20px;
+  @include border-radius(30px);
+  @include transition(background-color 0.3s ease);
+
+  &:hover {
+    background-color: $color-btn-contacto-hover-bg;
+    color: #fff !important;
+    @include transform-scale(1.02);
+    @include transition(all 0.3s ease);
+  }
+}
+
+.bg-beige {
+  background-color: $color-bg-beige;
+}
+
+.text-marron {
+  color: $color-text-marron;
+}
+
+.btn-enviar {
+  background-color: $color-btn-enviar-bg;
+  color: white;
+  font-weight: 500;
+  padding: 10px 30px;
+  @include border-radius(30px);
+  @include transition(background-color 0.3s ease);
+  border: none;
+
+  &:hover {
+    background-color: $color-btn-enviar-hover-bg;
+  }
+}
