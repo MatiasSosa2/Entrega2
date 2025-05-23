@@ -9,8 +9,11 @@
   }
 }
 body {
-  background-color: #cc7b1f !important;
-  color: #4d1a11 !important;
+  background-color: #ca7b20;
+  color: #4d1a11;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .frase {
@@ -18,10 +21,16 @@ body {
   font-weight: 600;
   font-size: 1rem;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  color: #422109;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .barranav {
   font-size: 1.2rem;
+  height: auto;
 }
 @media (min-width: 992px) {
   .barranav {
@@ -31,10 +40,10 @@ body {
 
 .nav-item .nav-link,
 .nav-item .nav-link.active {
-  color: white !important;
+  color: white;
   text-decoration: none;
+  margin: 0 1.875rem;
   transition: all 0.3s ease;
-  margin: 30px;
 }
 .nav-item .nav-link:hover {
   text-decoration: underline;
@@ -45,18 +54,26 @@ body {
   height: 30vh;
   object-fit: cover;
   opacity: 0.7;
+  width: 100%;
 }
 
 .text-overlay h2 {
   font-size: 3rem;
   font-weight: 600;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .text-overlay h2 {
+    font-size: 2rem;
+  }
 }
 
 .foto-logo {
   height: 8vh;
   border-radius: 30vh;
   margin-left: 5vh;
+  display: block;
 }
 
 .Contenedor-servicios {
@@ -64,29 +81,37 @@ body {
   border: 1px solid #422109;
   border-radius: 5vh;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  background-color: rgb(233.4, 154.2, 96.6);
 }
 .Contenedor-servicios h2,
 .Contenedor-servicios h4 {
   color: #422109;
   text-shadow: 1px 0 1px rgba(0, 0, 0, 0.7);
   font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 .Contenedor-servicios img {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   height: 15vh;
   width: 12vh;
   border-radius: 2vh;
+  object-fit: cover;
 }
 
 #carrusel {
   background-color: #422109;
+  padding: 2rem 0;
+  text-align: center;
 }
 #carrusel img {
   width: 80vw;
+  max-width: 1000px;
   height: 80vh;
   object-fit: cover;
-  margin: 10vh;
+  margin: 10vh auto;
   display: block;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
 .Receta {
@@ -94,12 +119,16 @@ body {
   border-radius: 1vh;
   border: none;
   height: 30vh;
+  padding: 1rem;
+  color: rgb(238.2561576355, 178.8916256158, 168.7438423645);
 }
 .Receta h5 {
-  color: rgb(100, 98, 96);
+  color: rgba(100, 98, 96, 0.8);
+  margin: 0 0 0.5rem 0;
 }
 .Receta p {
-  color: rgb(148, 122, 101);
+  color: rgba(148, 122, 101, 0.8);
+  margin: 0;
 }
 
 .card {
@@ -108,6 +137,7 @@ body {
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 .card:hover {
   transform: scale(1.02);
@@ -122,23 +152,28 @@ body {
 .card-body.Receta {
   padding: 1rem;
   background-color: #fff4e6;
-  color: #3f1910 !important;
+  color: #3f1910;
 }
 
-/* === MENU GENERAL === */
 .menu-section {
   background-color: #FAF3E0;
+  padding: 1rem 2rem;
 }
 
 .menu-categoria {
   color: #F57C00;
   font-weight: bold;
   border-bottom: 2px solid #F57C00;
-  padding-bottom: 5px;
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
 }
 
 .menu-lista {
   border: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 .menu-lista .list-group-item {
   background-color: #dac6a6;
@@ -147,64 +182,72 @@ body {
   display: flex;
   justify-content: space-between;
   color: #3E2723;
-  padding: 12px 16px;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
 }
 .menu-lista .list-group-item:hover {
   background-color: #FFE0B2;
-  cursor: pointer;
 }
 
 .presentacion-contacto {
   background-color: #d8be94;
   color: #4E342E;
+  padding: 2rem 1.5rem;
+  border-radius: 0.5rem;
+  margin: 2rem 0;
 }
 
 .titulo-contacto-inicio {
   font-weight: bold;
   color: #6D4C41;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .subtitulo-contacto-inicio {
   font-size: 1.2rem;
   color: #5D4037;
+  margin-bottom: 0.75rem;
 }
 
 .mensaje-contacto-inicio {
   color: #8D6E63;
   font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 .btn-contacto {
-  background-color: #504542 !important;
-  color: white !important;
-  font-weight: 500;
-  padding: 10px 20px;
-  border-radius: 30px;
+  background-color: #504542;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 3rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
   transition: background-color 0.3s ease;
 }
 .btn-contacto:hover {
-  background-color: #d38c76 !important;
-  color: #fff !important;
-  transform: scale(1.02);
-  transition: all 0.3s ease;
+  background-color: #d38c76;
 }
 
-.bg-beige {
+.fondo-beige {
   background-color: #F5F1EA;
-}
-
-.text-marron {
   color: #4E342E;
+  font-size: 1rem;
+  padding: 2rem;
+  border-radius: 10px;
 }
 
 .btn-enviar {
   background-color: #FF7043;
   color: white;
-  font-weight: 500;
-  padding: 10px 30px;
-  border-radius: 30px;
-  transition: background-color 0.3s ease;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
   border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 .btn-enviar:hover {
   background-color: #E64A19;
