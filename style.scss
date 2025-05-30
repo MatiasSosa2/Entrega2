@@ -1,10 +1,13 @@
 // Variables
 // Variables de color
+@use "sass:color";
+$white: #ffffff;     // si no lo tenés en variables.scss
 $color-fondo: #ca7b20;
 $color-texto: #4d1a11;
+$secondary-color: #4b2c1c;
 $color-frase-bg: #422109;
 $color-frase-text: #422109;
-$color-frase-shadow: rgba(0, 0, 0, 0.7);    
+$color-frase-shadow: rgba(0, 0, 0, 0.7);  
 $color-nav-link: white;
 $color-carrusel-bg: #422109;
 $color-receta-bg: #aa3521;
@@ -145,8 +148,10 @@ body {
   padding: 5vh;
   border: 1px solid $color-frase-bg;
   @include border-radius(5vh);
-  @include text-shadow(2px, 2px, 5px, $color-frase-shadow);
-  background-color: lighten($color-frase-bg, 50%);
+  @include text-shadow(2px, 2px, 5px, $color-frase-shadow); 
+  background-color: color.adjust($color-frase-bg, $lightness: 50%);
+
+
 
   h2,
   h4 {
@@ -190,7 +195,8 @@ body {
   border: none;
   height: 30vh;
   padding: 1rem;
-  color: lighten($color-receta-bg, 40%);
+  color: color.adjust($color-receta-bg, $lightness: 40%);
+
 
   h5 {
     color: rgba(100, 98, 96, 0.8);
@@ -270,47 +276,53 @@ body {
   }
 }
 
-// Presentación contacto
 .presentacion-contacto {
   background-color: $color-presentacion-bg;
   color: $color-presentacion-text;
-  padding: 2rem 1.5rem;
-  border-radius: 0.5rem;
-  margin: 2rem 0;
+  padding: 2.5rem 2rem;
+  border-radius: 1rem;
+  margin: 2.5rem 0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
 }
 
 .titulo-contacto-inicio {
-  font-weight: bold;
+  font-weight: 800;
+  font-size: 2rem;
+  margin-bottom: 1rem;
   color: $color-titulo-contacto;
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
 }
 
 .subtitulo-contacto-inicio {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: $color-subtitulo-contacto;
   margin-bottom: 0.75rem;
 }
 
 .mensaje-contacto-inicio {
+  font-size: 1.1rem;
   color: $color-mensaje-contacto;
-  font-size: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 
 .btn-contacto {
   background-color: $color-btn-contacto-bg;
   color: white;
-  padding: 0.6rem 1.2rem;
+  padding: 0.8rem 1.6rem;
   border: none;
-  border-radius: 3rem;
+  border-radius: 2rem;
   font-weight: 700;
-  cursor: pointer;
   text-transform: uppercase;
-  transition: background-color 0.3s ease;
+  cursor: pointer;
+  transition: all 0.3s ease;
 
   &:hover {
     background-color: $color-btn-contacto-hover-bg;
+    transform: scale(1.05);
   }
 }
 
@@ -320,21 +332,250 @@ body {
   color: $color-text-marron;
   font-size: 1rem;
   padding: 2rem;
-  border-radius: 10px;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
-// Botón enviar
+
 .btn-enviar {
   background-color: $color-btn-enviar-bg;
   color: white;
-  border-radius: 1rem;
-  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
+  padding: 0.6rem 1.3rem;
   font-weight: 700;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 
   &:hover {
     background-color: $color-btn-enviar-hover-bg;
+    transform: scale(1.05);
   }
 }
+
+
+.hero-section {
+  background-size: cover;
+  background-position: center;
+  background-color: $color-card-border;
+  color: $white;
+  padding: 120px 1.5rem;
+  text-align: center;
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.7);
+  font-family: 'Poppins', sans-serif;
+
+  h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+    letter-spacing: 0.1em;
+  }
+
+  p {
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    max-width: 720px;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+}
+
+// Historia - imágenes
+.history-img {
+  max-width: 100%;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+  }
+}
+
+.cta-button {
+  background-color: $color-btn-contacto-bg;
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  @include border-radius(10px);
+  @include transition(all 0.3s ease);
+
+  &:hover {
+    background-color: $color-btn-contacto-hover-bg;
+    @include transform-scale(1.05);
+    cursor: pointer;
+  }
+}
+
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-top: 3rem;
+
+
+  .timeline-item {
+    display: flex;
+    align-items: center; 
+    gap: 2rem;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+
+
+    .timeline-text {
+      flex: 1; 
+      display: flex;
+      flex-direction: column;
+
+      h3 {
+        font-size: 2.2rem;
+        margin-bottom: 0.6rem;
+        color: $secondary-color;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      p {
+        font-size: 1.125rem;
+        color: #444;
+        text-align: justify;
+        line-height: 1.6;
+      }
+    }
+
+    
+    img {
+      width: 350px;
+      max-width: 40%;
+      border-radius: 1rem;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  
+  .timeline-item.etapa-1  {
+    background-color: #cf7b43; 
+    border-left: 6px solid #e98f3b;
+  }
+
+  .timeline-item.etapa-2 {
+    background-color: #cf7b43; 
+    border-left: 6px solid #e98f3b;
+  }
+
+   .timeline-item.etapa-3 {
+    background-color: #cf7b43; 
+    border-left: 6px solid #e98f3b;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+  .timeline .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+
+    img {
+      width: 100%;
+      max-width: 100%;
+      margin-top: 1rem;
+    }
+  }
+}
+
+
+
+.servicios-section {
+  background-color: #d48d22;
+  border-radius: 10vh;
+  margin: 10vh 10vh 0 15vh;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  .titulo-seccion {
+    font-size: 2.75rem;
+    font-weight: 800;
+    color: $color-text-marron;
+    position: relative;
+    margin-bottom: 0.5rem;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, $color-menu-categoria, $color-btn-contacto-hover-bg);
+      border-radius: 4px;
+      margin: 1rem auto 0;
+    }
+  }
+
+  .subtitulo-seccion {
+    font-size: 1.2rem;
+    color: darken($color-subtitulo-contacto, 10%);
+    margin-top: 0.5rem;
+    font-weight: 500;
+  }
+
+  .servicio-card {
+    background: linear-gradient(145deg, #c77d38);
+    border: 1px solid lighten($color-card-border, 12%);
+    border-radius: 1.5rem;
+    max-height: 250px;
+    padding: 2.5rem 2rem;
+    transition: all 0.35s ease;
+    box-shadow: 
+      0 6px 18px rgba(0, 0, 0, 0.08),
+      0 3px 8px rgba(0, 0, 0, 0.04);
+
+    &:hover {
+      transform: translateY(-10px);
+      background: linear-gradient(145deg,  #da8333);
+      box-shadow: 
+        0 12px 28px rgba(0, 0, 0, 0.1),
+        0 6px 14px rgba(0, 0, 0, 0.05);
+    }
+
+    .icono-servicio {
+      font-size: 2.8rem;
+      background: linear-gradient(135deg, #d68164, $color-btn-contacto-hover-bg);
+      color: $white;
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s ease;
+    }
+
+    .titulo-servicio {
+      font-size: 1.5rem;
+      color: $color-texto;
+      font-weight: 700;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .descripcion-servicio {
+      color: $color-card-body-text;
+      font-size: 1rem;
+      line-height: 1.7;
+      padding: 0 0.5rem;
+    }
+  }
+} 
