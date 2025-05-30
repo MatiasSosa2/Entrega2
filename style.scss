@@ -483,6 +483,11 @@ body {
 
 
 @media (max-width: 768px) {
+  
+  .servicios-section {
+    margin: 0;
+  }
+  
   .timeline .timeline-item {
     flex-direction: column;
     align-items: flex-start;
